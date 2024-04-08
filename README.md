@@ -6,7 +6,7 @@ sybols from ELF .symtab segment.
 IDA, by default, in common segement, for each symbol, create DWORD value
 containig symbol size. Each xrefs for this symbol is directed to this value.
 Using fixups it is corrected to external variable. This cause that any offset
-added to this symbol cannot by treaed as struct or array element. This make
+added to this symbol cannot by treated as struct or array element. This make
 code analysis much harder.
 
 
@@ -24,7 +24,8 @@ common symbol. Then for each symbol in common segment do:
 
 - move data xrefs for old one to new one;
 
-This allow to define offsets of this new sybols as struct or array element.
+This allow to define offsets of this new sybols as struct or array element,
+making code analysis easier.
 
 
 
@@ -32,7 +33,7 @@ How to use:
 
 - Make backup of your database. Running this script may heavly damage it.
 
-- Run File->Script File... and choose this script
+- Run File->Script File... and choose this script.
 
 - When scipts asks, put any addres within IDA common segment to identify it.
 
@@ -41,13 +42,15 @@ How to use:
 - When done, check if new segment is created properly and (hopefully) all
 data xref are moved to it.
 
+- In case of unsedesirable effects, close database WITHOUT SAVING!
+
 
 
 Limitations:
 
-- This code works probabably only for 32bit binary.
+- This code works probably only for 32bit binary.
 
-- Some xrefs may not be moved due to conservative mmove coditions.
+- Some xrefs may not be moved due to conservative move conditions.
 
 - There are no safety checks. I.e. choosing wrong segment may broke database
 entirely.
