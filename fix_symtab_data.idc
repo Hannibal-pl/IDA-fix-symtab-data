@@ -1,5 +1,8 @@
 #include <idc.idc>
 
+//License: GPL-2.0+
+//Author:  Konrad Rzepecki <hannibal@astral.lodz.pl>
+
 extern rel_ea_start;
 extern rel_ea_end;
 extern new_seg_start;
