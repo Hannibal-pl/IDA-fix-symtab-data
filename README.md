@@ -42,6 +42,9 @@ How to use:
 - When done, check if new segment is created properly and (hopefully) all
 data xref are moved to it.
 
+- Reanalyze program to add new xrefs missing early.
+Options->General->Analysis->Reanalyze program
+
 - In case of unsedesirable effects, close database WITHOUT SAVING!
 
 
