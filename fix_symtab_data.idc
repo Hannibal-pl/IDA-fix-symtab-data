@@ -151,4 +151,9 @@ static main(void) {
     create_new_seg();
     move_vars();
     print("Fix complete.");
+
+    if (ask_yn(0, "Do you whish to realnalyze database?") != 1) {
+        //this range could be narrowed, but this is good enouh.
+        plan_and_wait(0, 0xFFFFFFFF);
+    }
 }

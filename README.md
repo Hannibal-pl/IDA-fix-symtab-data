@@ -39,11 +39,12 @@ How to use:
 
 - Now scripts run. It may take several seconds.
 
+- Optionaly reanalyze database. Script will ask, if you want to do it. It's
+recommended to do it, as new data xrefs can be created from now. If you decline,
+you can do it later by choosing: Options->General->Analysis->Reanalyze program.
+
 - When done, check if new segment is created properly and (hopefully) all
 data xref are moved to it.
-
-- Reanalyze program to add new xrefs missing early.
-Options->General->Analysis->Reanalyze program
 
 - In case of unsedesirable effects, close database WITHOUT SAVING!
 
