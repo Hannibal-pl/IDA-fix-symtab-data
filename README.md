@@ -16,7 +16,7 @@ common symbol. Then for each symbol in common segment do:
 
 - create new data in new segment of size described in old one;
 
-- rename old symbold to NAME_ref and give new symbol name NAME;
+- rename old symbol to NAME_ref and give new symbol name NAME;
 
 - patch code in text segment to point to new symbol;
 

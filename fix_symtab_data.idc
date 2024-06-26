@@ -143,7 +143,7 @@ static move_vars(void) {
 }
 
 static main(void) {
-    if (ask_yn(0, "This script heavy modify database and can damge it.\nIt's recomended to save database before you use if.\nDo you wish to continue?") != 1) {
+    if (ask_yn(0, "This script heavy modify database and can damge it.\nIt's recomended to save database before you use it.\nDo you wish to continue?") != 1) {
         return;
     }
 
@@ -152,7 +152,7 @@ static main(void) {
     move_vars();
     print("Fix complete.");
 
-    if (ask_yn(0, "Do you whish to realnalyze database?") != 1) {
+    if (ask_yn(0, "Do you whish to realnalyze database?") == 1) {
         //this range could be narrowed, but this is good enouh.
         plan_and_wait(0, 0xFFFFFFFF);
     }
